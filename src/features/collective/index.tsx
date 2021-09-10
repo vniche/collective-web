@@ -28,7 +28,7 @@ export function Collective() {
       {isError &&
         JSON.stringify(error)
       }
-      <Table columns={columns} dataSource={servers} loading={isLoading} />;
+      <Table columns={columns} dataSource={servers} loading={isLoading} />
     </>
   )
 }
