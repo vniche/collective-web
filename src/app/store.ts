@@ -1,10 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { collectiveApi } from '../features/collective/api';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    [collectiveApi.reducerPath]: collectiveApi.reducer,
   },
+  middleware: (gDM) => gDM().concat(collectiveApi.middleware),
 });
 
 export type AppDispatch = typeof store.dispatch;

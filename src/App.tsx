@@ -1,57 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { Layout, Card } from "antd";
+import { Collective } from "./features/collective";
+import { HeartFilled as Heart } from "@ant-design/icons";
 import './App.css';
 
+const { Content, Footer } = Layout;
+
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Layout>
+      <Content style={{ padding: '0 50px' }}>
+        <Layout className="site-layout-background" style={{ padding: '24px 0' }}>
+          <Card>
+            <Collective />
+          </Card>
+        </Layout>
+      </Content>
+      <Footer style={{ textAlign: 'center' }}>made with <Heart/> by <a href={"https://github.com/vniche"} target="_blank" rel="noopener noreferrer">vniche</a> + <a href={"https://github.com/matbrito"} target="_blank" rel="noopener noreferrer">matbrito</a></Footer>
+    </Layout>
   );
 }
 
