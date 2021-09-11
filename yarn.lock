@@ -10282,10 +10282,10 @@ rsvp@^4.8.4:
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
   integrity sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA==
 
-rtk-query-grpc-web@^0.0.1-delta:
-  version "0.0.1-delta"
-  resolved "https://registry.yarnpkg.com/rtk-query-grpc-web/-/rtk-query-grpc-web-0.0.1-delta.tgz#7edbd26e6074a00e1fd81b3a3970e993d7d0e443"
-  integrity sha512-JzpTXGj1F9gRRiNo7mKk0KJYQJ3pe26VMQIeQDXdPLNxRTvjqXoyI91BwgAWttBc7J1MNU+qH2mC08COocGNNA==
+rtk-query-grpc-web@^0.0.1-foxtrot:
+  version "0.0.1-foxtrot"
+  resolved "https://registry.yarnpkg.com/rtk-query-grpc-web/-/rtk-query-grpc-web-0.0.1-foxtrot.tgz#1b055ed359c54e8dca0ee90a314ad574f3ea89d4"
+  integrity sha512-MaNyBXZSYE/BIRhaNQDjIrr1uNELULTPRwynY64A/6uSAb1LmTnH6TjvFn8Fd+0htNnve1OCRHeR5tegCaxZYA==
   dependencies:
     "@improbable-eng/grpc-web" "^0.14.1"
     google-protobuf "^3.18.0-rc.2"

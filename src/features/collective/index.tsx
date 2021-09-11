@@ -21,13 +21,10 @@ const columns = [
 ];
 
 export function Collective() {
-  const { data: servers, isLoading, isError, error } = useListServersQuery();
+  const { data: servers, isLoading } = useListServersQuery();
 
   return (
     <>
-      {isError &&
-        JSON.stringify(error)
-      }
       <Table columns={columns} dataSource={servers} loading={isLoading} />
     </>
   )

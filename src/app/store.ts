@@ -1,11 +1,14 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import { collectiveApi } from '../features/collective/api';
+import { collectiveApi, rtkQueryErrorLogger } from '../features/collective/api';
 
 export const store = configureStore({
   reducer: {
     [collectiveApi.reducerPath]: collectiveApi.reducer,
   },
-  middleware: (gDM) => gDM().concat(collectiveApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([
+    collectiveApi.middleware,
+    rtkQueryErrorLogger
+  ]),
 });
 
 export type AppDispatch = typeof store.dispatch;
